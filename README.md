@@ -1,6 +1,6 @@
 # Goal-Diggers
-Group Member : Keith Tan Jia Wen , Khoo Jin Zheng Daniel
-Proposed Level of Achievement : Gemini 
+Group Member : Keith Tan Jia Wen , Khoo Jin Zheng Daniel    
+Proposed Level of Achievement : Gemini
 
 ## Motivation
 Have you ever find it difficult to accomplish your goals? For example, starting revision early for your exams, submitting projects on time, eating healthy or exercising. We would tend to procrastinate or even forget about the goals that we wanted to achieve for ourselves. This can lead to undesirable consequences in the long run as these goals take a much longer time to complete or we set lower targets for ourselves instead.
