@@ -14,5 +14,5 @@ We hope to help people to accomplish their goals on time, motivating them and su
 
 ## Scope Of Project
 
-## Project Log 
+## Project Log  
 [Access it here](https://docs.google.com/spreadsheets/d/1627yw5_XkMy7Iwnjxbx3gzkLc4e0jlNZPGXV5smlsdI/edit?usp=sharing)
