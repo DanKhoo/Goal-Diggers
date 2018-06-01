@@ -41,4 +41,7 @@ Therefore, features will be implemented according to their priorities to allow u
 ## Project Log  
 [Access it here](https://docs.google.com/spreadsheets/d/1627yw5_XkMy7Iwnjxbx3gzkLc4e0jlNZPGXV5smlsdI/edit?usp=sharing)
 
+## Poster
+[Access it here](https://drive.google.com/file/d/1QzX9UBhvEgfZ6lSxoRm_jCgvJX2uBxS3/view?usp=sharing)
+
 ## Video
