@@ -45,3 +45,4 @@ Therefore, features will be implemented according to their priorities to allow u
 [Access it here](https://drive.google.com/file/d/1QzX9UBhvEgfZ6lSxoRm_jCgvJX2uBxS3/view?usp=sharing)
 
 ## Video
+[Access it here](https://youtu.be/Sp5ttuiS3s0)
