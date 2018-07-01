@@ -38,11 +38,83 @@ Therefore, features will be implemented according to their priorities to allow u
 1) Android Studio 
 2) Firebase 
 
-## Project Log  
-[Access it here](https://docs.google.com/spreadsheets/d/1627yw5_XkMy7Iwnjxbx3gzkLc4e0jlNZPGXV5smlsdI/edit?usp=sharing)
+### **Milestone 1**
+***Project Log*** - [Access it here](https://docs.google.com/spreadsheets/d/1627yw5_XkMy7Iwnjxbx3gzkLc4e0jlNZPGXV5smlsdI/edit?usp=sharing)  
+***Poster*** - [Access it here](https://drive.google.com/file/d/1QzX9UBhvEgfZ6lSxoRm_jCgvJX2uBxS3/view?usp=sharing)  
+***Video*** - [Access it here](https://youtu.be/Sp5ttuiS3s0)  
 
-## Poster
-[Access it here](https://drive.google.com/file/d/1QzX9UBhvEgfZ6lSxoRm_jCgvJX2uBxS3/view?usp=sharing)
 
-## Video
-[Access it here](https://youtu.be/Sp5ttuiS3s0)
+### **Milestone 2**
+
+**Deliverables**
+
+***Project Log*** - [Access it here](https://docs.google.com/spreadsheets/d/1627yw5_XkMy7Iwnjxbx3gzkLc4e0jlNZPGXV5smlsdI/edit?usp=sharing)    
+***Poster*** - [Access it here](https://drive.google.com/file/d/1QzX9UBhvEgfZ6lSxoRm_jCgvJX2uBxS3/view?usp=sharing)  
+***Video*** - [Access it here](https://youtu.be/Sp5ttuiS3s0)  
+
+Level of achievement: Gemini
+
+Aim:  
+We want to help people to accomplish their goals on time and support them on their journey.
+
+Project Scope:  
+We want to help people to achieve their desired goals on time. Whether users have short-term or long-term goals, we want to assist them in completing it and fighting procrastination.
+
+By Milestone 2, we have came up with the Minimum Viable Product for the User Application.  
+Core Features developed:
+1. Login
+2. Signup, Email Verification
+3. Forgot Password, Email Verification
+4. Create reminder, set notification
+5. Update reminder
+6. Delete reminder
+
+Problems encountered:  
+After the evaluation by our peers and advisor, Daniel and I realized that we were trying to meet too many needs, helping users to accomplish their goals, motivating them and having peer support group for them. We decided to focus our aim on helping users to accomplish their goals by having a reminder app. However, things took another turn when we realized that there were already many mobile applications in the market and we struggled to make our product creative. As a result, we had to change the overall layout, plan and also our development.  
+
+Features for the next phase:
+1. Searchbar - allow users to navigate our application  
+2. Display of goals completed and uncompleted separately - allow users to keep track of the number of goals they have achieved and the number they have yet to complete, serves as a motivational boost  
+
+### User App
+> SignUp Screen
+
+<img src="./misc/SignUp.jpeg" alt="SignUp page" height="300"> <img src="./misc/EmailVerification.jpg" alt="Email Verification Page" height="300">  
+
+User will sign up with their email & password, a verification will be emailed to the user.
+
+> Login Screen
+
+<img src="./misc/Login.jpeg" alt="Login page" height="300">  
+
+User verification, User will then be able to login with Email & Password.
+
+> Reset Password
+
+<img src="./misc/ForgetPassword.jpeg" alt="ForgetPassword page" height="300"> <img src="./misc/Reset_Password.jpg" alt="Reset Verificataion page" height="300">  
+
+User will receive an email with a link to reset the password.
+
+> Home Page  
+
+<img src="./misc/Home.jpeg" alt="Home page" height="300">. 
+
+User will be able to see all the goals set --> Title, Message & whether the alert status is On/Off.
+
+> Add Goal Page
+
+<img src="./misc/Add_Goal.jpeg" alt="Add_Goal page" height="300">  
+
+User will be able to input the title, details of the goal and also user can choose to set alert notification On/Off.
+
+> Edit Goal Page
+
+<img src="./misc/Edit_Page.jpg" alt="Edit_Goal page" height="300">  
+
+User will be able to edit any mistake made in the details or also enable/disable the alert notification as well as delete this goal.
+
+> Notification
+
+<img src="./misc/Notification.jpeg" alt="Notification page" height="300">  
+
+An example of the notification user will receive upon the Date/Time set by the user.
