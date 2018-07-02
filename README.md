@@ -39,6 +39,8 @@ Therefore, features will be implemented according to their priorities to allow u
 2) Firebase 
 
 ### **Milestone 1**
+**Deliverables**  
+
 ***Project Log*** - [Access it here](https://docs.google.com/spreadsheets/d/1627yw5_XkMy7Iwnjxbx3gzkLc4e0jlNZPGXV5smlsdI/edit?usp=sharing)  
 ***Poster*** - [Access it here](https://drive.google.com/file/d/1QzX9UBhvEgfZ6lSxoRm_jCgvJX2uBxS3/view?usp=sharing)  
 ***Video*** - [Access it here](https://youtu.be/Sp5ttuiS3s0)  
@@ -49,32 +51,33 @@ Therefore, features will be implemented according to their priorities to allow u
 **Deliverables**
 
 ***Project Log*** - [Access it here](https://docs.google.com/spreadsheets/d/1627yw5_XkMy7Iwnjxbx3gzkLc4e0jlNZPGXV5smlsdI/edit?usp=sharing)    
-***Poster*** - [Access it here](https://drive.google.com/file/d/1QzX9UBhvEgfZ6lSxoRm_jCgvJX2uBxS3/view?usp=sharing)  
+***Poster*** - [Access it here](https://drive.google.com/file/d/1DfBdkJ3xrJV9oEh5nUpNGEl-JmdwOjic/view?usp=sharing)  
 ***Video*** - [Access it here](https://youtu.be/Sp5ttuiS3s0)  
 
-Level of achievement: Gemini
+Proposed Level of Achievement : Gemini  
 
-Aim:  
+**Aim:**  
 We want to help people to accomplish their goals on time and support them on their journey.
 
-Project Scope:  
-We want to help people to achieve their desired goals on time. Whether users have short-term or long-term goals, we want to assist them in completing it and fighting procrastination.
+**Project Scope:**  
+We want to help people achieve their desired goals on time whether the users have short-term or long-term goals, we want to assist them in completing it and fight procrastination.
+
+**Problems encountered:**  
+After the evaluation by our peers and advisor, we realized that we were trying to meet too many needs, helping users to accomplish their goals, motivating them and having peer support group for them. We decided to focus our aim on helping users to accomplish their goals by having a reminder app. However, things took another turn when we realized that there were already many mobile applications in the market and we struggled to make our product creative. As a result, we had to change the overall layout, plan and also our development.  
 
 By Milestone 2, we have came up with the Minimum Viable Product for the User Application.  
-Core Features developed:
+**Core Features developed:**
 1. Login
 2. Signup, Email Verification
 3. Forgot Password, Email Verification
-4. Create reminder, set notification
-5. Update reminder
-6. Delete reminder
+4. Create goal, Set notification
+5. Display goals
+6. Update goal
+7. Delete goal
 
-Problems encountered:  
-After the evaluation by our peers and advisor, Daniel and I realized that we were trying to meet too many needs, helping users to accomplish their goals, motivating them and having peer support group for them. We decided to focus our aim on helping users to accomplish their goals by having a reminder app. However, things took another turn when we realized that there were already many mobile applications in the market and we struggled to make our product creative. As a result, we had to change the overall layout, plan and also our development.  
-
-Features for the next phase:
-1. Searchbar - allow users to navigate our application  
-2. Display of goals completed and uncompleted separately - allow users to keep track of the number of goals they have achieved and the number they have yet to complete, serves as a motivational boost  
+**Features for the next phase:**
+1. Searchbar - allow users to search within the application for all related goals based on keyword  
+2. Display completed and incomplete goals separately - completed and yet to complete goals will serve as a motivation to work towards completing more goals  
 
 ### User App
 > SignUp Screen
@@ -87,7 +90,7 @@ User will sign up with their email & password, a verification will be emailed to
 
 <img src="./misc/Login.jpeg" alt="Login page" height="300">  
 
-User verification, User will then be able to login with Email & Password.
+Upon verification, User will then be able to login with Email & Password.
 
 > Reset Password
 
@@ -99,7 +102,7 @@ User will receive an email with a link to reset the password.
 
 <img src="./misc/Home.jpeg" alt="Home page" height="300">. 
 
-User will be able to see all the goals set --> Title, Message & whether the alert status is On/Off.
+User will be able to see all the goals set --> Title, Message & whether the alert notification is On/Off.
 
 > Add Goal Page
 
@@ -117,4 +120,4 @@ User will be able to edit any mistake made in the details or also enable/disable
 
 <img src="./misc/Notification.jpeg" alt="Notification page" height="300">  
 
-An example of the notification user will receive upon the Date/Time set by the user.
+An example of the notification the user will receive upon the Date/Time set by the user.
