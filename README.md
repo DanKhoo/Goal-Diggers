@@ -52,7 +52,7 @@ Therefore, features will be implemented according to their priorities to allow u
 
 ***Project Log*** - [Access it here](https://docs.google.com/spreadsheets/d/1627yw5_XkMy7Iwnjxbx3gzkLc4e0jlNZPGXV5smlsdI/edit?usp=sharing)    
 ***Poster*** - [Access it here](https://drive.google.com/file/d/1DfBdkJ3xrJV9oEh5nUpNGEl-JmdwOjic/view?usp=sharing)  
-***Video*** - [Access it here](https://youtu.be/Sp5ttuiS3s0)  
+***Video*** - [Access it here](https://youtu.be/XIU5FKDC84s)  
 
 Proposed Level of Achievement : Gemini  
 
