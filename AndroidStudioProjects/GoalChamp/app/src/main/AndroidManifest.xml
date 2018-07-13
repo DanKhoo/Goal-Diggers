@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.danielk.goalchamp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Splashscreen"
+            android:theme="@style/AppThemeNoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="GoalChamp"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".AccountActivity.SignupActivity"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".AccountActivity.ResetPasswordActivity"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".ProfileActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".drawerActivity"
+            android:label="GoalChamp"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".AddActivity"
+            android:label="Add Goal"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".EditActivity"
+            android:label="Edit Goal"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".AccountActivity.LoginActivity"></activity>
+        <receiver android:name=".AlarmReceiver" android:process=":remote" />
+    </application>
+
+</manifest>

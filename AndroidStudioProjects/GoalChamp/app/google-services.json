@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "688234762267",
+    "firebase_url": "https://goalchamp-2a346.firebaseio.com",
+    "project_id": "goalchamp-2a346",
+    "storage_bucket": "goalchamp-2a346.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688234762267:android:41948e2022305b1a",
+        "android_client_info": {
+          "package_name": "com.example.danielk.goalchamp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "688234762267-k6ag1dtujvamjmnen6ui36vjqitkiusk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUIcxMDRnK-sMCwwWC6rar2eIg09Bp3gA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
