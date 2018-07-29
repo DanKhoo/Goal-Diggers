@@ -121,3 +121,43 @@ User will be able to edit any mistake made in the details or also enable/disable
 <img src="./misc/Notification.jpeg" alt="Notification page" height="300">  
 
 An example of the notification the user will receive upon the Date/Time set by the user.
+
+### **Milestone 3**
+
+**Deliverables**
+
+***Project Log*** - [Access it here](https://docs.google.com/spreadsheets/d/1627yw5_XkMy7Iwnjxbx3gzkLc4e0jlNZPGXV5smlsdI/edit?usp=sharing)    
+***Poster*** - [Access it here](https://drive.google.com/file/d/1NPNkCJ2fg1GuhTqzXiX54SUSkNXQYH6u/view?usp=sharing)  
+***Video*** -   
+
+Proposed Level of Achievement : Gemini 
+
+In Milestone 3, we have done improvements on some of our existing features and also added more features as follows: 
+
+**Features developed for this phase:**
+1. Searchbar - allow users to search within the application for all related goals based on keyword  
+2. Display completed and incomplete goals separately - completed and yet to complete goals will serve as a motivation to work towards completing more goals 
+
+### User App
+> Main Screen
+
+<img src="./misc/Main_Layout.jpg" alt="Main_Layout page" height="300">
+
+User will be able to keep track of incomplete and completed goals easily with tabbed layout.
+
+> Search Screen
+
+<img src="./misc/Search_bar.jpg" alt="Search_bar page" height="300">
+
+User will be able to filter goals based on keyword by using the search feature.
+
+> Improved Edit Goal Page
+
+<img src="./misc/Complete_Goal.jpg" alt="Complete_Goal page" height="300">  <img src="./misc/Confirm_Complete.jpg" alt="Confirm complete goal page" height="300">  
+
+User will be able to mark the goal as completed from the complete button at the Edit Goal Page.   
+Confirmation dialog will appear for user to confirm their decision.  
+Upon confirmation, the goal will be moved to Completed Goals tab.  
+
+### UML Diagram
+<img src="./misc/milestone3_uml.png" alt="UML Diagram" height="650">
