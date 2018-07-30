@@ -128,7 +128,8 @@ An example of the notification the user will receive upon the Date/Time set by t
 
 ***Project Log*** - [Access it here](https://docs.google.com/spreadsheets/d/1627yw5_XkMy7Iwnjxbx3gzkLc4e0jlNZPGXV5smlsdI/edit?usp=sharing)    
 ***Poster*** - [Access it here](https://drive.google.com/file/d/1NPNkCJ2fg1GuhTqzXiX54SUSkNXQYH6u/view?usp=sharing)  
-***Video*** -   
+***Video*** - [Access it here](https://youtu.be/_c6Xmti3VVE)  
+***App Apk*** - [Access it here](https://github.com/DanKhoo/Goal-Diggers/blob/master/misc/app-debug.apk)
 
 Proposed Level of Achievement : Gemini 
 
@@ -149,7 +150,7 @@ User will be able to keep track of incomplete and completed goals easily with ta
 
 <img src="./misc/Search_bar.jpg" alt="Search_bar page" height="300">
 
-User will be able to filter goals based on keyword by using the search feature.
+User will be able to filter goals based on keyword, through the search feature.
 
 > Improved Edit Goal Page
 
@@ -160,4 +161,4 @@ Confirmation dialog will appear for user to confirm their decision.
 Upon confirmation, the goal will be moved to Completed Goals tab.  
 
 ### UML Diagram
-<img src="./misc/milestone3_uml.png" alt="UML Diagram" height="650">
+[Access it here](https://raw.githubusercontent.com/DanKhoo/Goal-Diggers/master/misc/milestone3_uml.png)
