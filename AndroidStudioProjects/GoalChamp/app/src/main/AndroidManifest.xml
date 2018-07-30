@@ -22,7 +22,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="GoalChamp"
+            android:label="Goal Champ"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".AccountActivity.SignupActivity"

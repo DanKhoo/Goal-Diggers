@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity
                     .setCustomAnimations(R.anim.anim_slide_in_from_left, R.anim.anim_slide_out_from_left)
                     .replace(R.id.f1content,
                             new MainFragment()).addToBackStack("tag").commit();
-            setTitle("GoalChamp");
+            setTitle("Goal Champ");
         }
 
         if (id == R.id.nav_profile) {

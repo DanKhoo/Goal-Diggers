@@ -144,5 +144,21 @@
         app:layout_constraintTop_toBottomOf="@+id/tvSetDate"
         app:layout_constraintVertical_bias="0.018" />
 
+    <Button
+        android:id="@+id/setCompleteBtn"
+        android:layout_width="151dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/loginbutton_bg_rounded_corners"
+        android:text="Complete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSetTime"
+        app:layout_constraintVertical_bias="0.100000024" />
+
 
 </android.support.constraint.ConstraintLayout>

@@ -2,9 +2,13 @@ package com.example.danielk.goalchamp;
 
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -15,6 +19,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListAdapter;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,8 +40,8 @@ import java.util.List;
  */
 public class MainFragment extends Fragment {
 
-    private RecyclerView myRecyclerView;
-    private List<Goal> listGoals;
+    private ViewPager mViewPager;
+    private TabLayout tabLayout;
 
     public MainFragment() {
         // Required empty public constructor
@@ -47,27 +52,24 @@ public class MainFragment extends Fragment {
         inflater.inflate(R.menu.main, menu);
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        listGoals = new ArrayList<>();
-
-        View view = inflater.inflate(R.layout.fragment_main, container, false);
-        myRecyclerView = view.findViewById(R.id.my_recycler_view);
-        final GoalsRvAdapter goalsRvAdapter = new GoalsRvAdapter(getContext(), listGoals);
-        myRecyclerView.setAdapter(goalsRvAdapter);
-        myRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-
-        getFirebaseData(new GoalsCallback() {
-            @Override
-            public void onCallBack(Goal goal) {
-                listGoals.add(goal);
-                goalsRvAdapter.notifyDataSetChanged();
-            }
-        });
-
         // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_main, container, false);
+
+        tabLayout = view.findViewById(R.id.tablayout_id);
+        mViewPager = view.findViewById(R.id.viewpager_id);
+        PagerAdapter adapter = new PagerAdapter(getChildFragmentManager());
+        // add frag
+        adapter.AddFragment(new UncompletedFragment(), "Ongoing");
+        adapter.AddFragment(new CompletedFragment(), "Completed");
+        mViewPager.setAdapter(adapter);
+        mViewPager.setCurrentItem(0);
+        tabLayout.setupWithViewPager(mViewPager);
+
         return view;
     }
 
@@ -77,39 +79,6 @@ public class MainFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
-    }
-
-    private void getFirebaseData(final GoalsCallback goalsCallback) {
-        FirebaseAuth auth = FirebaseAuth.getInstance();
-        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference databaseReference = firebaseDatabase.getReference("goals").child(auth.getUid());
-
-        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                //Result will be hold here
-                for (DataSnapshot dataSnap : dataSnapshot.getChildren()) {
-                    Goal goal = new Goal();
-                    String noteId = String.valueOf(dataSnap.child("id").getValue());
-                    String title = String.valueOf(dataSnap.child("title").getValue());
-                    String message = String.valueOf(dataSnap.child("message").getValue());
-                    String date = String.valueOf(dataSnap.child("date").getValue());
-                    String time = String.valueOf(dataSnap.child("time").getValue());
-                    goal.setId(noteId);
-                    goal.setTitle(title);
-                    goal.setMessage(message);
-                    goal.setDate(date);
-                    goal.setTime(time);
-                    Log.d("test", noteId);
-                    goalsCallback.onCallBack(goal);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
     }
 
     // Handle Add Menu

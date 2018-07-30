@@ -10,9 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.List;
 
@@ -53,7 +51,7 @@ public class GoalsRvAdapter extends RecyclerView.Adapter<GoalsRvAdapter.MyViewHo
         holder.tv_title.setText(mData.get(position).getTitle());
         holder.tv_message.setText(mData.get(position).getMessage());
         Log.d("DATE",mData.get(position).getDate());
-        if (mData.get(position).getDate().equals("Not Set")) {
+        if (mData.get(position).getDate().equals("Not Set") && mData.get(position).getTime().equals("Not Set")) {
             holder.tv_alarm.setText("No Alert.");
         } else {
             holder.tv_alarm.setText("Alert on " + mData.get(position).getDate() + " " + mData.get(position).getTime());

@@ -28,6 +28,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.DateFormat;
 import java.util.Calendar;
 
 public class EditActivity extends AppCompatActivity {
@@ -35,7 +36,7 @@ public class EditActivity extends AppCompatActivity {
     private EditText mEditTextTitle, mEditTextMessage;
     private TextView mSetDate, mSetTime;
     private String goalId;
-    private Button dateShow, timeShow;
+    private Button dateShow, timeShow, completedBtn;
     private int mDate, mMonth, mYear, mHour, mMinute;
     private FirebaseAuth auth;
     private Switch mAlert;
@@ -53,6 +54,7 @@ public class EditActivity extends AppCompatActivity {
         dateShow = findViewById(R.id.setDateBtn);
         timeShow = findViewById(R.id.setTimeBtn);
         mAlert = findViewById(R.id.switchAlarm);
+        completedBtn = findViewById(R.id.setCompleteBtn);
         auth = FirebaseAuth.getInstance();
 
         // Add back button
@@ -74,6 +76,13 @@ public class EditActivity extends AppCompatActivity {
             }
         });
 
+        completedBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showCompleteConfirmationDialog();
+            }
+        });
+
         // Get Goal from bundle
         Bundle b = this.getIntent().getExtras();
         if (b != null) {
@@ -84,6 +93,8 @@ public class EditActivity extends AppCompatActivity {
             mSetTime.setText(goal.getTime());
             if (mSetDate.getText().equals("Not Set")) {
                 mAlert.setChecked(false);
+                dateShow.setEnabled(false);
+                timeShow.setEnabled(false);
             } else {
                 mAlert.setChecked(true);
                 String[] dateParts = goal.getDate().split("/");
@@ -191,6 +202,32 @@ public class EditActivity extends AppCompatActivity {
         return true;
     }
 
+    private void showCompleteConfirmationDialog() {
+        // Create an AlertDialog.Builder and set the message, and click listeners
+        // for the positive and negative buttons on the dialog
+        AlertDialog.Builder builder = new AlertDialog.Builder((this));
+        builder.setMessage("Are you sure this goal is completed?");
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                completeGoal();
+                Toast.makeText(EditActivity.this, "Goal completed", Toast.LENGTH_SHORT).show();
+                backToMainActivity();
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                if (dialog != null) {
+                    dialog.dismiss();
+                }
+            }
+        });
+
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
+
     private void showDeleteConfirmationDialog() {
         // Create an AlertDialog.Builder and set the message, and click listeners
         // for the positive and negative buttons on the dialog
@@ -200,6 +237,7 @@ public class EditActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 deleteGoal();
+                Toast.makeText(EditActivity.this, "Goal deleted", Toast.LENGTH_SHORT).show();
                 backToMainActivity();
             }
         });
@@ -216,11 +254,29 @@ public class EditActivity extends AppCompatActivity {
         alertDialog.show();
     }
 
+    private void completeGoal() {
+        deleteGoal();
+        Calendar calendar = Calendar.getInstance();
+        mDate = calendar.get(Calendar.DAY_OF_MONTH);
+        mMonth = calendar.get(Calendar.MONTH) + 1;
+        mYear = calendar.get(Calendar.YEAR);
+        String currentDate = mDate + "/" + mMonth + "/" + mYear;
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("completedGoals").child(auth.getUid());
+        // goal object to store title and message
+        String noteId = mDatabase.push().getKey();
+        Goal goal = new Goal();
+        goal.setTitle(mEditTextTitle.getText().toString());
+        goal.setMessage(mEditTextMessage.getText().toString());
+        goal.setId(noteId);
+        goal.setDate(currentDate);
+        goal.setTime("Completed");
+        mDatabase.child(noteId).setValue(goal);
+    }
+
     private void deleteGoal() {
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("goals").child(auth.getUid());
         mDatabase.child(goalId).removeValue();
         cancelAlarm(goalId.hashCode());
-        Toast.makeText(EditActivity.this, "Goal deleted", Toast.LENGTH_SHORT).show();
     }
 
     private void updateGoal() {
